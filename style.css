@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização da barra superior */
+.navbar {
+    background-color: #1e3942; /* Azul */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+/* Estilização da barra superior */
+.navbar {
+    background-color: #1e3942; /* Azul que você pediu */
+    display: flex;
+    justify-content: space-between; /* Alinha logo no centro e links à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 15px 30px;
+}
+
+/* Logo centralizado */
+.navbar .logo {
+    height: 50px; /* Ajuste o tamanho do logo conforme necessário */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o logo horizontalmente */
+}
+
+/* Estilização dos links de navegação */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Estilização do conteúdo principal */
+.hero {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.hero h1 {
+    color: #1e3942;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Estilização do formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #1e3942;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #14474c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
