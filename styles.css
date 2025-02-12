@@ -1,0 +1,314 @@
+/* Definir a fonte Harmonais Visual - HV Muse Regular */
+@font-face {
+    font-family: 'Harmonais';
+    src: url('fonts/Harmonais Visual - HV Muse Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Definir a fonte Yorkten-NorThi */
+@font-face {
+    font-family: 'Yorkten';
+    src: url('fonts/Yorkten-NorThi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar a fonte Harmonais no body */
+h1, body {
+    font-family: 'Harmonais', sans-serif;
+}
+
+/* Aplicar a fonte Yorkten em títulos */
+h2, h3, h4, h5 {
+    font-family: 'Yorkten', serif;
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    height: auto; /* Mantém a proporção original */
+    max-height: 80px; /* Ajuste conforme necessário */
+    width: auto; /* Garante que não seja forçado um redimensionamento */
+}
+
+/* Estilo da navbar */
+.navbar {
+    background-color: #e0e0e0; /* Cor de fundo */
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e menu à direita */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 5px 30px;
+}
+
+/* Logo alinhada à esquerda */
+.navbar .logo {
+    height: 80px; /* Ajuste conforme necessário */
+    position: static; /* Remove a centralização anterior */
+    transform: none; /* Remove a transformação anterior */
+}
+
+/* Itens do menu alinhados à direita */
+.navbar nav {
+    margin-left: auto; /* Empurra os itens do menu para a direita */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+    position: relative; /* Necessário para o menu dropdown */
+}
+
+/* Estilo dos itens do menu (links) */
+.navbar ul li a {
+    font-family: 'Yorkten', serif; /* Ou qualquer fonte que você tenha definido */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #1e3942; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Define o peso da fonte, se necessário */
+    position: relative; /* Necessário para o sublinhado */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+
+/* Adiciona o sublinhado com border-bottom */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Espessura do sublinhado */
+    background-color: #1e3942; /* Cor do sublinhado */
+    transform: scaleX(0); /* Inicialmente o sublinhado está escondido */
+    transform-origin: bottom right; /* A transição começa da direita para a esquerda */
+    transition: transform 0.3s ease; /* Transição suave para o sublinhado */
+}
+
+/* Efeito de hover: o sublinhado aparece suavemente */
+.navbar ul li a:hover::after {
+    transform: scaleX(1); /* Mostra o sublinhado ao passar o mouse */
+    transform-origin: bottom left; /* A transição do sublinhado vai da esquerda para a direita */
+}
+
+.navbar ul li a:hover {
+    color: #14474c; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Container principal dos blocos */
+.content-section {
+    display: flex;
+    width: 100%;
+    height: 700px; /* Altura fixa para manter proporção */
+    overflow: hidden;
+}
+
+/* Bloco de texto (Esquerda) */
+.content-text {
+    width: 50%;
+    background-color: #1d3841; /* Cor do bloco esquerdo */
+    color: #dde1e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Mantém o texto centralizado verticalmente, se necessário */
+    align-items: center; /* Alinha os itens à esquerda */
+    padding: 70px;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+
+/* Bloco de imagem (Direita) */
+.content-image {
+    width: 50%;
+    background-color: #b3b7c2; /* Cor do bloco direito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adiciona altura 100% para garantir que ocupe toda a altura do container */
+}
+
+/* Imagem responsiva */
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para preencher o bloco */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-text, .content-image {
+        width: 100%;
+        height: 250px; /* Ajuste no mobile */
+    }
+}
+
+/* Aumentar o tamanho da frase específica */
+.content-text h1 {
+    font-size: 3em; /* Tamanho maior para a frase */
+    font-weight: bold; /* Deixa o texto em negrito, se quiser */
+    text-align: center; /* Centraliza o texto, se necessário */
+}
+
+/* Estilo do botão "Agende sua consulta" */
+.btn-agendar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dde1e0; /* Cor de fundo do botão */
+    color: #1d3841;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px; /* Espaço acima do botão */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
+}
+
+.btn-agendar:hover {
+    background-color: #b7bbc4; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* Container da seção */
+.story-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 20px 50px; /* Espaço extra no topo para não ficar colado */
+    background-color: #e1e1e1; /* Cor de fundo do bloco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px; /* Altura mínima */
+}
+
+/* Texto principal (fundo) */
+.story-text {
+    max-width: 800px;
+    text-align: justify;
+    font-size: 1.2em;
+    color: #0e2328;
+    padding: 50px;
+    background-color: #b7bbc4;
+    /*border-radius: 8px;*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* Garante que fique atrás do título flutuante */
+}
+
+/* Quadrado flutuante */
+.floating-box {
+    position: absolute;
+    top: 40px; /* Move para sobrepor o bloco de baixo */
+    left: 35%;
+    background-color: #0c2529;
+    color: #dfe1e0;
+    padding: 15px 40px;
+    font-size: 0.7em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2; /* Fica na frente do bloco de texto */
+}
+
+/* Responsividade: Ajusta posição do título em telas menores */
+@media (max-width: 768px) {
+    .floating-box {
+        font-size: 1.2em;
+        padding: 10px 25px;
+        top: -30px;
+    }
+
+    .story-text {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
+
+/* Aplica a fonte personalizada diretamente aos itens da lista */
+.services-list li {
+    font-family: 'Yorkten', serif; /* Aplica a fonte personalizada aos itens da lista */
+    font-size: 1.2em; /* Ajuste opcional para manter proporção */
+}
+
+/* Aplica o negrito ao conteúdo dentro do <strong> */
+.services-list li strong {
+    font-family: 'Yorkten', serif; /* Aplica a mesma fonte ao strong */
+    font-weight: bold; /* Aplica o negrito apenas ao conteúdo do strong */
+}
+
+
+/* Container do feed do Instagram */
+.instagram-feed {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Container geral */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Coluna esquerda - Agendamento */
+.agendamento {
+    width: 48%;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+/* Coluna direita - Instagram Feed */
+.instagram-feed {
+    width: 48%; /* Largura de 48% */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo do texto do Instagram */
+.instagram-text {
+    padding: 15px;
+    color: black;
+    border-radius: 8px;
+}
+
+/* Estilo do vídeo do Instagram */
+.instagram-video {
+    max-width: 100%;
+    width: auto; /* Mantém a proporção */
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Responsividade: Coloca os itens em uma única coluna no mobile */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center; /* Centraliza as colunas */
+    }
+
+    .agendamento, .instagram-feed {
+        width: 80%; /* No mobile, ocupa 80% da largura */
+        margin-bottom: 20px;
+    }
+}
