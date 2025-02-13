@@ -24,7 +24,6 @@ h2, h3, h4, h5 {
     font-family: 'Yorkten', serif;
 }
 
-
 /* Reset básico */
 * {
     margin: 0;
@@ -34,9 +33,7 @@ h2, h3, h4, h5 {
 }
 
 .logo {
-    height: auto; /* Mantém a proporção original */
     max-height: 80px; /* Ajuste conforme necessário */
-    width: auto; /* Garante que não seja forçado um redimensionamento */
 }
 
 /* Estilo da navbar */
@@ -48,21 +45,11 @@ h2, h3, h4, h5 {
     padding: 5px 30px;
 }
 
-/* Logo alinhada à esquerda */
-.navbar .logo {
-    height: 80px; /* Ajuste conforme necessário */
-    position: static; /* Remove a centralização anterior */
-    transform: none; /* Remove a transformação anterior */
-}
-
-/* Itens do menu alinhados à direita */
-.navbar nav {
-    margin-left: auto; /* Empurra os itens do menu para a direita */
-}
-
-.navbar ul {
+nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li {
@@ -85,24 +72,67 @@ h2, h3, h4, h5 {
 .navbar ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px; /* Espessura do sublinhado */
-    background-color: #1e3942; /* Cor do sublinhado */
-    transform: scaleX(0); /* Inicialmente o sublinhado está escondido */
-    transform-origin: bottom right; /* A transição começa da direita para a esquerda */
-    transition: transform 0.3s ease; /* Transição suave para o sublinhado */
+    bottom: -3px; /* Pequeno ajuste */
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1e3942;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 /* Efeito de hover: o sublinhado aparece suavemente */
 .navbar ul li a:hover::after {
     transform: scaleX(1); /* Mostra o sublinhado ao passar o mouse */
     transform-origin: bottom left; /* A transição do sublinhado vai da esquerda para a direita */
+    width: 100%;
+    left: 0;
 }
 
 .navbar ul li a:hover {
     color: #14474c; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Estilização do Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e0e0e0; /* Agora a cor de fundo é igual à navbar */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 180px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Borda arredondada para um visual mais bonito */
+}
+
+/* .dropdown-menu li {
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1);  Pequeno ajuste para melhor contraste  
+} */
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    font-size: 16px !important; /* Aumenta o tamanho da fonte */
+    padding: 12px 15px;
+    display: block;
+    color: #1e3942; /* Mantém a cor dos links */
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+/* Efeito hover para os itens do dropdown */
+.dropdown-menu a:hover {
+    /*background-color: #d0d0d0;  Tom levemente mais escuro ao passar o mouse */
+    color: #14474c;
+}
+
+/* Mostra o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* Container principal dos blocos */
