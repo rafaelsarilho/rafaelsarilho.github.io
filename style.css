@@ -812,3 +812,266 @@ footer {
     white-space: nowrap;
     border: 0;
 }
+/* PrEP Fácil Section - CORRIGIDO */
+.prep-facil {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--foco) 100%);
+    color: var(--surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.prep-facil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.prep-facil-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 968px) {
+    .prep-facil-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.prep-facil-content {
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.prep-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.prep-facil h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--surface);
+}
+
+.prep-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.prep-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.prep-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.prep-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+.prep-pricing {
+    margin-bottom: 2.5rem;
+}
+
+.price-highlight {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
+
+.price-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.price-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--surface);
+}
+
+.price-period {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.prep-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* CORREÇÃO DOS BOTÕES */
+.prep-cta {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.prep-cta.primary {
+    background: var(--surface);
+    color: var(--verde-escuro); /* CORRIGIDO: texto escuro */
+    box-shadow: var(--shadow-medium);
+}
+
+.prep-cta.secondary {
+    background: transparent;
+    color: var(--surface);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.prep-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.prep-cta.primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--verde-escuro); /* CORRIGIDO: manter texto escuro no hover */
+}
+
+.prep-cta.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--surface);
+}
+
+.prep-facil-visual {
+    display: flex;
+    justify-content: center;
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.prep-visual-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+}
+
+.prep-visual-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.prep-visual-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--surface);
+}
+
+.prep-visual-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.prep-visual-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.visual-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.step-dot {
+    width: 40px;
+    height: 40px;
+    background: var(--surface);
+    color: var(--verde-escuro); /* CORRIGIDO: texto escuro */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    .prep-facil h3 {
+        font-size: 2rem;
+    }
+    
+    .prep-buttons {
+        flex-direction: column;
+    }
+    
+    .prep-cta {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .prep-visual-steps {
+        gap: 0.5rem;
+    }
+    
+    .step-dot {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
