@@ -449,21 +449,24 @@ section {
     margin: 0 auto;
 }
 
-/* Planos Section */
+/* Planos Section - Updated */
 .planos {
     background: var(--background);
 }
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .plan-card {
     background: var(--surface);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     transition: var(--transition);
@@ -473,7 +476,7 @@ section {
 
 .plan-card.featured {
     border-color: var(--primary-light);
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: var(--shadow-medium);
 }
 
@@ -483,20 +486,22 @@ section {
 }
 
 .plan-card.featured:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px) scale(1.02);
 }
 
 .plan-badge {
     position: absolute;
-    top: -10px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary-light);
-    color: var(--primary-dark);
-    padding: 0.3rem 1rem;
+    background: var(--success);
+    color: var(--surface);
+    padding: 0.4rem 1.2rem;
     border-radius: 20px;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .plan-header {
@@ -506,7 +511,7 @@ section {
 
 .plan-header h3 {
     color: var(--primary-dark);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -516,7 +521,7 @@ section {
 }
 
 .price-value {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--primary-accent);
 }
@@ -524,11 +529,27 @@ section {
 .price-period {
     font-size: 1rem;
     color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.price-discount {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--success);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.price-installment {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
 }
 
 .plan-description {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .plan-features {
@@ -538,14 +559,22 @@ section {
 
 .plan-features li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 .feature-icon {
     color: var(--success);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.plan-features .highlight {
+    color: var(--primary-accent);
     font-weight: 600;
 }
 
@@ -553,18 +582,20 @@ section {
     width: 100%;
     background: var(--primary-light);
     color: var(--primary-dark);
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
     display: block;
     transition: var(--transition);
+    font-size: 1.1rem;
 }
 
 .plan-cta:hover {
     background: var(--primary-accent);
     color: var(--surface);
+    transform: translateY(-1px);
 }
 
 .plans-note {
@@ -573,6 +604,8 @@ section {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-light);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .plans-note p {
@@ -582,11 +615,37 @@ section {
     justify-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+    line-height: 1.6;
 }
 
 .note-icon {
     font-size: 1.2rem;
 }
+
+/* Responsive para planos */
+@media (max-width: 767px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .plan-card {
+        padding: 2rem;
+    }
+    
+    .plan-card.featured {
+        transform: none;
+    }
+    
+    .plan-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .price-value {
+        font-size: 2.5rem;
+    }
+}
+
 
 /* FAQ Section */
 .faq {
