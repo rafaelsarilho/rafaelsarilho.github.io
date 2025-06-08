@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Avaliação | PrEP Fácil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resultado.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="questionario-header">
+        <div class="brand">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">PrEP <span class="logo-accent">Fácil</span></span>
+            </div>
+        </div>
+        <a href="index.html" class="back-btn">
+            <span class="back-icon">🏠</span>
+            Início
+        </a>
+    </header>
+
+    <main class="resultado-main">
+        <div class="container">
+            <div class="resultado-container">
+                <div class="resultado-header">
+                    <div class="resultado-icon" id="resultadoIcon">
+                        <!-- Ícone será definido pelo JavaScript -->
+                    </div>
+                    <h1 class="resultado-titulo" id="resultadoTitulo">
+                        <!-- Título será definido pelo JavaScript -->
+                    </h1>
+                    <p class="resultado-subtitulo" id="resultadoSubtitulo">
+                        <!-- Subtítulo será definido pelo JavaScript -->
+                    </p>
+                </div>
+
+                <div class="resultado-content" id="resultadoContent">
+                    <!-- Conteúdo será preenchido pelo JavaScript -->
+                </div>
+
+                <div class="resultado-actions">
+                    <a href="questionario.html" class="action-btn secondary">
+                        🔄 Refazer Questionário
+                    </a>
+                    <a href="#contato" class="action-btn primary" id="actionButton">
+                        📞 Agendar Consulta
+                    </a>
+                </div>
+
+                <div class="resultado-disclaimer">
+                    <div class="disclaimer-icon">⚠️</div>
+                    <div class="disclaimer-content">
+                        <h4>Importante</h4>
+                        <p>Este resultado é apenas uma avaliação inicial baseada no Protocolo Clínico do Ministério da Saúde. A prescrição de PrEP deve sempre ser feita por um médico após consulta presencial e exames adequados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="resultado.js"></script>
+</body>
+</html>

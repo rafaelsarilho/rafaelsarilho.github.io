@@ -1,0 +1,254 @@
+/* Resultado Styles */
+.resultado-main {
+    background: var(--background);
+    min-height: calc(100vh - 70px);
+    padding: 2rem 0;
+}
+
+.resultado-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.resultado-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: var(--surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+}
+
+.resultado-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.resultado-titulo {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.resultado-subtitulo {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resultado-content {
+    background: var(--surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.content-section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.content-section h3 {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.content-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.list-icon {
+    font-size: 1rem;
+    margin-top: 0.1rem;
+}
+
+.list-icon.success {
+    color: var(--success);
+}
+
+.list-icon.warning {
+    color: var(--warning);
+}
+
+.list-icon.error {
+    color: var(--error);
+}
+
+.list-icon.info {
+    color: #3b82f6;
+}
+
+.modalidade-card {
+    background: rgba(78, 205, 196, 0.1);
+    border: 2px solid var(--primary-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.modalidade-card h4 {
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.modalidade-card p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.alert-card {
+    border-left: 4px solid;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.alert-card.warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--warning);
+}
+
+.alert-card.error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: var(--error);
+}
+
+.alert-card.info {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+.resultado-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.action-btn.primary {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.action-btn.primary:hover {
+    background: var(--primary-accent);
+    color: var(--surface);
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    background: var(--gray-light);
+    color: var(--text-secondary);
+}
+
+.action-btn.secondary:hover {
+    background: var(--gray-medium);
+}
+
+.resultado-disclaimer {
+    background: var(--surface);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.disclaimer-icon {
+    font-size: 1.5rem;
+}
+
+.disclaimer-content h4 {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer-content p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .resultado-container {
+        padding: 0 1rem;
+    }
+    
+    .resultado-header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .resultado-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .resultado-actions {
+        flex-direction: column;
+    }
+    
+    .resultado-disclaimer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Estados específicos */
+.resultado-apto {
+    border-top: 4px solid var(--success);
+}
+
+.resultado-nao-apto {
+    border-top: 4px solid var(--error);
+}
+
+.resultado-atencao {
+    border-top: 4px solid var(--warning);
+}

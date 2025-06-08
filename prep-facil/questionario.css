@@ -1,0 +1,355 @@
+/* Questionário Styles */
+.questionario-header {
+    padding: 1rem 1.5rem;
+    background: var(--primary-dark);
+    color: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--surface);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.questionario-main {
+    background: var(--background);
+    min-height: calc(100vh - 70px);
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.questionario-header-content {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.questionario-header-content h1 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.questionario-header-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.progress-container {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 14%;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-text {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.progress-percentage {
+    color: var(--primary-accent);
+    font-weight: 600;
+}
+
+.questionario-form {
+    background: var(--surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+}
+
+.form-content {
+    padding: 2.5rem;
+    min-height: 400px;
+}
+
+.secao {
+    display: none;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.secao.active {
+    display: block;
+}
+
+.secao-header {
+    margin-bottom: 2rem;
+}
+
+.secao-badge {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.secao-title {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.secao-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.pergunta {
+    margin-bottom: 2rem;
+}
+
+.pergunta-titulo {
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 2px solid var(--gray-light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--surface);
+}
+
+.opcao:hover {
+    border-color: var(--primary-light);
+    background: rgba(78, 205, 196, 0.05);
+}
+
+.opcao.selected {
+    border-color: var(--primary-accent);
+    background: rgba(78, 205, 196, 0.1);
+}
+
+.opcao input[type="radio"],
+.opcao input[type="checkbox"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-accent);
+}
+
+.opcao-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: pointer;
+    flex: 1;
+}
+
+.opcao.multiple {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-navigation {
+    padding: 1.5rem 2.5rem;
+    background: var(--background);
+    border-top: 1px solid var(--gray-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    min-width: 120px;
+}
+
+.prev-btn {
+    background: var(--gray-light);
+    color: var(--text-secondary);
+}
+
+.prev-btn:hover {
+    background: var(--gray-medium);
+}
+
+.next-btn, .submit-btn {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.next-btn:hover, .submit-btn:hover {
+    background: var(--primary-accent);
+    color: var(--surface);
+    transform: translateY(-1px);
+}
+
+.submit-btn {
+    background: var(--success);
+    color: var(--surface);
+}
+
+.submit-btn:hover {
+    background: #0f9669;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+}
+
+.alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--warning);
+    color: #92400e;
+}
+
+.alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    color: #1e40af;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--gray-light);
+    border-top: 4px solid var(--primary-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .form-content {
+        padding: 1.5rem;
+    }
+    
+    .form-navigation {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+    
+    .opcao {
+        padding: 0.8rem;
+    }
+    
+    .questionario-header-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

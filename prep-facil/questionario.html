@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Elegibilidade | PrEP Fácil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="questionario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="questionario-header">
+        <div class="brand">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">PrEP <span class="logo-accent">Fácil</span></span>
+            </div>
+        </div>
+        <a href="index.html" class="back-btn">
+            <span class="back-icon">←</span>
+            Voltar
+        </a>
+    </header>
+
+    <main class="questionario-main">
+        <div class="container">
+            <div class="questionario-header-content">
+                <h1>Questionário de Elegibilidade para PrEP</h1>
+                <p>Baseado no Protocolo Clínico do Ministério da Saúde</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-info">
+                    <span class="progress-text" id="progressText">Seção 1 de 7</span>
+                    <span class="progress-percentage" id="progressPercentage">14%</span>
+                </div>
+            </div>
+
+            <form id="questionarioForm" class="questionario-form">
+                <div class="form-content" id="formContent">
+                    <!-- Conteúdo das seções será inserido aqui -->
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" id="prevBtn" class="nav-btn prev-btn" style="display: none;">
+                        ← Anterior
+                    </button>
+                    <button type="button" id="nextBtn" class="nav-btn next-btn">
+                        Próxima →
+                    </button>
+                    <button type="submit" id="submitBtn" class="nav-btn submit-btn" style="display: none;">
+                        Finalizar Avaliação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="loadingModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="loading-spinner"></div>
+            <p>Analisando suas respostas...</p>
+        </div>
+    </div>
+
+    <script src="questionario.js"></script>
+</body>
+</html>
